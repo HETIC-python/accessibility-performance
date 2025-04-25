@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - page</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        /* background-color: #f9f9f9; */
+        list-style: none;
+        padding: 0px;
+      }
+      body {
+        font-size: 18px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+      .pricing-plans-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vhp; */
+        gap: 4rem;
+      }
+      .pricing-table {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        /* margin: 5rem; */
+        /* flex-grow: inherit; */
+      }
+      .pricing-plan {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 1rem;
+        background-color: white;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10rem;
+        gap: 4rem;
+      }
+      main[aria-label="Pricing Page"] {
+        /* background-color: #f9f9f9; */
+        padding: 2rem;
+        border-radius: 8px;
+      }
+
+      section[role="contentinfo"] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      p[aria-label=""] {
+        font-size: 1.2em;
+        /* color: #555; */
+        text-align: center;
+      }
+
+      .pricing-plan h2 {
+        color: var(--primary-bg-color);
+      }
+      .pricing-plan p {
+        color: #555;
+        /* font-size: 1.2em; */
+      }
+      li {
+        text-align: left;
+        color: #3f0f64;
+        padding-left: 35px;
+        position: relative;
+        margin-bottom: 15px;
+      }
+      ul {
+        width: 100%;
+      }
+
+      ul li:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #b266ed;
+        border-radius: 50%;
+        top: 5px;
+        left: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <main aria-label="Pricing Page" aria-labelledby="pricing-header">
+      <h1 id="pricing-header">Pricing</h1>
+      <section role="contentinfo" aria-label="Our Pricing Plans">
+        <!-- <h2 id="pricing-plan-header">Our offers</h2> -->
+        <div
+          class="pricing-plans-container"
+          role="region"
+          aria-label="Pricing Plans"
+          aria-labelledby="pricing-header"
+          aria-describedby="pricing-plan-description"
+        >
+          <p id="pricing-header" aria-label="Pricing plan header">
+            We are a leading app development agency specializing in Shopify,
+            WordPress, and custom solutions.
+          </p>
+          <p
+            id="pricing-plan-description"
+            aria-label="Pricing Plan Description"
+          >
+            Choose a plan that fits your needs. Each plan comes with guaranteed
+            result, delivered with extra care and expertise by our professional
+            team.
+          </p>
+          <div class="pricing-table" role="table">
+            <div
+              class="pricing-plan"
+              role="row"
+              aria-label="Basic Software Development Plan"
+            >
+              <h2 id="basic-plan">Basic Development</h2>
+              <p>Price: Starting at $5,000</p>
+              <p>Features:</p>
+              <ul>
+                <li>Web application development</li>
+                <li>Basic support</li>
+                <li>3 months maintenance</li>
+                <li>Responsive design</li>
+                <li>SEO optimization</li>
+                <li>Basic security features</li>
+              </ul>
+            </div>
+            <div
+              class="pricing-plan"
+              role="row"
+              aria-label="Professional Software Development Plan"
+            >
+              <h2 id="pro-plan">Professional Development</h2>
+              <p>Price: Starting at $15,000</p>
+              <p>Features:</p>
+              <ul>
+                <li>Full-stack development</li>
+                <li>Priority support</li>
+                <li>6 months maintenance</li>
+                <li>API integration</li>
+                <li>Advanced security measures</li>
+                <li>Performance optimization</li>
+                <li>Database design</li>
+                <li>Cloud deployment</li>
+              </ul>
+            </div>
+            <div
+              class="pricing-plan"
+              role="row"
+              aria-label="Enterprise Software Development Plan"
+            >
+              <h2 id="enterprise-plan">Enterprise Solutions</h2>
+              <p>Price: Contact us for pricing</p>
+              <p>Features:</p>
+              <ul>
+                <li>Full-stack development</li>
+                <li>24/7 dedicated support</li>
+                <li>12 months maintenance</li>
+                <li>Custom API development</li>
+                <li>Enterprise-grade security</li>
+                <li>Load balancing & scaling</li>
+                <li>Database optimization</li>
+                <li>Multi-cloud deployment</li>
+                <li>Disaster recovery</li>
+                <li>Custom integrations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
