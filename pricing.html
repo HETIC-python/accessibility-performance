@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pricing - page</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
     <style>
       * {
         box-sizing: border-box;
@@ -105,11 +105,24 @@
         top: 5px;
         left: 15px;
       }
+      
+      .pricing-btn {
+        background-color: #b266ed;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+      }
     </style>
   </head>
   <body>
+    <!-- MAIN BODY TAG START -->
     <main aria-label="Pricing Page" aria-labelledby="pricing-header">
       <h1 id="pricing-header">Pricing</h1>
+
+      <!-- PRICE SECTION START -->
       <section role="contentinfo" aria-label="Our Pricing Plans">
         <!-- <h2 id="pricing-plan-header">Our offers</h2> -->
         <div
@@ -148,6 +161,13 @@
                 <li>SEO optimization</li>
                 <li>Basic security features</li>
               </ul>
+              <button
+                class="pricing-btn"
+                aria-label="Contact us for Professional Development Plan"
+                onclick="location.href='mailto:contact@contact.com' "
+              >
+                Contact us
+              </button>
             </div>
             <div
               class="pricing-plan"
@@ -167,6 +187,13 @@
                 <li>Database design</li>
                 <li>Cloud deployment</li>
               </ul>
+              <button
+                class="pricing-btn"
+                aria-label="Contact us for Professional Development Plan"
+                onclick="location.href='mailto:contact@contact.com' "
+              >
+                Contact us
+              </button>
             </div>
             <div
               class="pricing-plan"
@@ -188,10 +215,19 @@
                 <li>Disaster recovery</li>
                 <li>Custom integrations</li>
               </ul>
+              <button
+                class="pricing-btn"
+                aria-label="Contact us for Professional Development Plan"
+                onclick="location.href='mailto:contact@contact.com' "
+              >
+                Contact us
+              </button>
             </div>
           </div>
         </div>
       </section>
+      <!-- PRICE SECTION END -->
     </main>
+    <!-- MAIN BODY TAG END -->
   </body>
 </html>
