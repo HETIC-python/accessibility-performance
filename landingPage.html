@@ -43,32 +43,6 @@
       }
 
       /* LandingPage */
-      .hero {
-        background: linear-gradient(to right, #0d6efd, #6610f2);
-        color: white;
-        padding: 100px 20px;
-        text-align: center;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 20px;
-      }
-
-      .hero a {
-        display: inline-block;
-        padding: 10px 20px;
-        background: white;
-        color: #0d6efd;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-      }
 
       .section-title {
         text-align: center;
@@ -155,7 +129,8 @@
       }
 
       form button {
-        display: inline-block;
+        display: flex;
+        width: 40%;
         padding: 10px 20px;
         background: #0d6efd;
         color: white;
@@ -163,11 +138,15 @@
         border-radius: 5px;
         font-weight: bold;
         cursor: pointer;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
   <body>
-    <main>
+    <main role="main">
       <!-- SERVICES -->
       <section id="services" class="container">
         <h2 class="section-title">Ce que nous faisons</h2>
@@ -203,7 +182,7 @@
       <section class="cta-section">
         <h2>Un projet en tête ?</h2>
         <p>Contactez nos experts pour donner vie à votre vision digitale.</p>
-        <a href="#contact">Nous contacter</a>
+        <a href="#contact" aria-label="Allez au formulaire pour nous contacter">Nous contacter</a>
       </section>
 
       <!-- Témoignages -->
@@ -252,30 +231,33 @@
         <div class="row text-center">
           <div class="col-md-4">
             <img
-              src="team1.jpg"
-              alt="Membre 1"
+              src="https://printler.com/media/photo/145834.jpg"
+              alt="alexandre Dupuis"
               class="rounded-circle mb-3"
               width="150"
+              height="250"
             />
             <h5>Alexandre Dupuis</h5>
             <p>CEO & Fondateur</p>
           </div>
           <div class="col-md-4">
             <img
-              src="team2.jpg"
-              alt="Membre 2"
+              src="https://cdn.shopify.com/s/files/1/0252/1736/8154/files/android_21_base_large.png?v=1586698938"
+              alt="Shopie Martin"
               class="rounded-circle mb-3"
               width="150"
+              height="250"
             />
             <h5>Sophie Martin</h5>
             <p>Lead Développeuse</p>
           </div>
           <div class="col-md-4">
             <img
-              src="team3.jpg"
-              alt="Membre 3"
+              src="https://i.pinimg.com/236x/4b/df/4e/4bdf4ec410b8cfe14bd8bfda44ffd0ff.jpg"
+              alt="Thomas Leroy"
               class="rounded-circle mb-3"
               width="150"
+              height="250"
             />
             <h5>Thomas Leroy</h5>
             <p>Responsable DevOps</p>
@@ -286,7 +268,7 @@
       <!-- Formulaire de contact -->
       <section id="contact" class="container">
         <h2 class="section-title">Contactez-nous</h2>
-        <form>
+        <form aria-label="Formulaire">
           <div class="mb-3">
             <label for="name">Nom</label>
             <input type="text" id="name" placeholder="Votre nom" />
