@@ -4,22 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pricing - page</title>
-    <link rel="stylesheet" href="./main.css" />
+    <!-- <link rel="stylesheet" href="./main.css" /> -->
     <style>
+      :root {
+        --primary-color: #8a3cc9;
+        --primary-dark: #8a3cc9;
+        --text-color: #055142;
+        --text-light: #555;
+        --accent-color: #8a3cc9;
+        --border-color: #ccc;
+        --background-color: #055142;
+        --white: #ffffff;
+        
+      }
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        /* background-color: #f9f9f9; */
         list-style: none;
-        padding: 0px;
       }
       body {
         font-size: 18px;
+        line-height: 1.5;
+        color: var(--text-color);
+        background-color: var(--background-color);
+
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        /* background-color: var(--main-color); */
+        /* color: #333; */
+      }
+      main {
+        width: fit-content;
+        /* background-color: var; */
       }
 
       h1 {
         font-size: 2em;
+        margin-bottom: 1rem;
       }
       .pricing-plans-container {
         display: flex;
@@ -27,7 +51,10 @@
         align-items: center;
         justify-content: center;
         /* height: 100vhp; */
+        background-color: white;
+        border-radius: 10px;
         gap: 4rem;
+        padding: 2rem;
       }
       .pricing-table {
         display: flex;
@@ -64,6 +91,15 @@
         border-radius: 8px;
       }
 
+      #pricing-header {
+        font-size: 2.5em;
+        margin-bottom: 1rem;
+        background-color: var(--white);
+        padding-right: 1rem;
+        padding-left: 1rem;
+        border-radius: 10px;
+      }
+
       section[role="contentinfo"] {
         display: flex;
         flex-direction: column;
@@ -78,21 +114,23 @@
       }
 
       .pricing-plan h2 {
-        color: var(--primary-bg-color);
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
       }
       .pricing-plan p {
-        color: #555;
-        /* font-size: 1.2em; */
+        color: var(--text-light);
+        margin-bottom: 0.5rem;
       }
       li {
         text-align: left;
-        color: #3f0f64;
+        color: var(--text-color);
         padding-left: 35px;
         position: relative;
         margin-bottom: 15px;
       }
       ul {
         width: 100%;
+        margin: 1rem 0;
       }
 
       ul li:before {
@@ -100,60 +138,86 @@
         position: absolute;
         width: 10px;
         height: 10px;
-        background-color: #b266ed;
+        background-color: var(--primary-color);
         border-radius: 50%;
-        top: 5px;
+        top: 8px;
         left: 15px;
       }
-      
+
       .pricing-btn {
-        background-color: #b266ed;
-        color: white;
+        background-color: var(--primary-color);
+        color: var(--white);
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
         font-size: 1em;
+        transition: background-color 0.3s ease;
+      }
+
+      .pricing-btn:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .pricing-btn:focus {
+        outline: 3px solid var(--accent-color);
+        outline-offset: 2px;
+      }
+
+      /* Responsive design for mobile screens */
+      @media (max-width: 768px) {
+        .pricing-table {
+          flex-direction: column;
+        }
+
+        main {
+          padding: 2rem;
+        }
+      }
+
+      /* Skip to content link for keyboard users */
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px;
+        z-index: 100;
+      }
+
+      .skip-link:focus {
+        top: 0;
       }
     </style>
   </head>
   <body>
+    <!-- Skip to content link for keyboard users -->
+    <a href="#pricing-header" class="skip-link">Skip to content</a>
+
     <!-- MAIN BODY TAG START -->
-    <main aria-label="Pricing Page" aria-labelledby="pricing-header">
+    <main id="main-content" aria-labelledby="pricing-header">
       <h1 id="pricing-header">Pricing</h1>
 
       <!-- PRICE SECTION START -->
-      <section role="contentinfo" aria-label="Our Pricing Plans">
-        <!-- <h2 id="pricing-plan-header">Our offers</h2> -->
-        <div
-          class="pricing-plans-container"
-          role="region"
-          aria-label="Pricing Plans"
-          aria-labelledby="pricing-header"
-          aria-describedby="pricing-plan-description"
-        >
-          <p id="pricing-header" aria-label="Pricing plan header">
+      <section aria-labelledby="pricing-intro-header">
+        <div class="pricing-plans-container">
+          <h2 id="pricing-intro-header">Our Development Solutions</h2>
+          <p>
             We are a leading app development agency specializing in Shopify,
             WordPress, and custom solutions.
           </p>
-          <p
-            id="pricing-plan-description"
-            aria-label="Pricing Plan Description"
-          >
+          <p id="pricing-plan-description">
             Choose a plan that fits your needs. Each plan comes with guaranteed
             result, delivered with extra care and expertise by our professional
             team.
           </p>
-          <div class="pricing-table" role="table">
-            <div
-              class="pricing-plan"
-              role="row"
-              aria-label="Basic Software Development Plan"
-            >
+          <div class="pricing-table">
+            <div class="pricing-plan">
               <h2 id="basic-plan">Basic Development</h2>
-              <p>Price: Starting at $5,000</p>
-              <p>Features:</p>
-              <ul>
+              <p><strong>Price:</strong> Starting at $5,000</p>
+              <p><strong>Features:</strong></p>
+              <ul aria-labelledby="basic-plan">
                 <li>Web application development</li>
                 <li>Basic support</li>
                 <li>3 months maintenance</li>
@@ -163,21 +227,17 @@
               </ul>
               <button
                 class="pricing-btn"
-                aria-label="Contact us for Professional Development Plan"
-                onclick="location.href='mailto:contact@contact.com' "
+                aria-label="Contact us about Basic Development Plan"
+                onclick="location.href='mailto:contact@contact.com'"
               >
                 Contact us
               </button>
             </div>
-            <div
-              class="pricing-plan"
-              role="row"
-              aria-label="Professional Software Development Plan"
-            >
+            <div class="pricing-plan">
               <h2 id="pro-plan">Professional Development</h2>
-              <p>Price: Starting at $15,000</p>
-              <p>Features:</p>
-              <ul>
+              <p><strong>Price:</strong> Starting at $15,000</p>
+              <p><strong>Features:</strong></p>
+              <ul aria-labelledby="pro-plan">
                 <li>Full-stack development</li>
                 <li>Priority support</li>
                 <li>6 months maintenance</li>
@@ -189,21 +249,17 @@
               </ul>
               <button
                 class="pricing-btn"
-                aria-label="Contact us for Professional Development Plan"
-                onclick="location.href='mailto:contact@contact.com' "
+                aria-label="Contact us about Professional Development Plan"
+                onclick="location.href='mailto:contact@contact.com'"
               >
                 Contact us
               </button>
             </div>
-            <div
-              class="pricing-plan"
-              role="row"
-              aria-label="Enterprise Software Development Plan"
-            >
+            <div class="pricing-plan">
               <h2 id="enterprise-plan">Enterprise Solutions</h2>
-              <p>Price: Contact us for pricing</p>
-              <p>Features:</p>
-              <ul>
+              <p><strong>Price:</strong> Contact us for pricing</p>
+              <p><strong>Features:</strong></p>
+              <ul aria-labelledby="enterprise-plan">
                 <li>Full-stack development</li>
                 <li>24/7 dedicated support</li>
                 <li>12 months maintenance</li>
@@ -217,8 +273,8 @@
               </ul>
               <button
                 class="pricing-btn"
-                aria-label="Contact us for Professional Development Plan"
-                onclick="location.href='mailto:contact@contact.com' "
+                aria-label="Contact us about Enterprise Solutions Plan"
+                onclick="location.href='mailto:contact@contact.com'"
               >
                 Contact us
               </button>
