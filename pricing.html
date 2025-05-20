@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pricing - page</title>
-    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./navbar.css" />
+    <link rel="stylesheet" href="./footer.css" />
+
     <!-- <link rel="stylesheet" href="./main.css" /> -->
     <style>
       :root {
@@ -97,12 +99,12 @@
         margin-bottom: 0.5rem;
       }
 
-     .pricing-table ul {
+      .pricing-table ul {
         width: 100%;
         margin: 1rem 0;
       }
 
-     .pricing-table li {
+      .pricing-table li {
         text-align: left;
         color: var(--text-color);
         padding-left: 35px;
@@ -110,7 +112,7 @@
         margin-bottom: 15px;
       }
 
-     .pricing-table ul li:before {
+      .pricing-table ul li:before {
         content: "";
         position: absolute;
         width: 10px;
@@ -201,88 +203,104 @@
       <!-- PRICE SECTION START -->
       <section aria-labelledby="pricing-intro-header">
         <div class="pricing-plans-container">
-          <h2 id="pricing-intro-header">Our Development Solutions</h2>
+          <h2 id="pricing-intro-header">Nos solutions de développement</h2>
           <p>
-            We are a leading app development agency specializing in Shopify,
-            WordPress, and custom solutions.
+            Nous sommes une agence de développement d'applications de premier
+            plan, spécialisée dans Shopify, WordPress et les solutions sur
+            mesure.
           </p>
           <p id="pricing-plan-description">
-            Choose a plan that fits your needs. Each plan comes with guaranteed
-            result, delivered with extra care and expertise by our professional
-            team.
+            Choisissez un plan adapté à vos besoins. Chaque plan garantit des
+            résultats, livrés avec soin et expertise par notre équipe
+            professionnelle.
           </p>
           <div class="pricing-table">
             <div class="pricing-plan">
-              <h2 id="basic-plan">Basic Development</h2>
-              <p><strong>Price:</strong> Starting at $5,000</p>
-              <p><strong>Features:</strong></p>
+              <h2 id="basic-plan">Développement Basique</h2>
+              <p><strong>Prix :</strong> À partir de 5 000 $</p>
+              <p><strong>Fonctionnalités :</strong></p>
               <ul aria-labelledby="basic-plan">
-                <li>Web application development</li>
-                <li>Basic support</li>
-                <li>3 months maintenance</li>
-                <li>Responsive design</li>
-                <li>SEO optimization</li>
-                <li>Basic security features</li>
+                <li>Développement d'application web</li>
+                <li>Support de base</li>
+                <li>Maintenance pendant 3 mois</li>
+                <li>Design responsive</li>
+                <li>Optimisation SEO</li>
+                <li>Fonctionnalités de sécurité de base</li>
               </ul>
               <button
                 class="pricing-btn"
                 aria-label="Contact us about Basic Development Plan"
                 onclick="location.href='mailto:contact@contact.com'"
               >
-                Contact us
+                Nous contacter
               </button>
             </div>
             <div class="pricing-plan">
-              <h2 id="pro-plan">Professional Development</h2>
-              <p><strong>Price:</strong> Starting at $15,000</p>
-              <p><strong>Features:</strong></p>
+              <h2 id="pro-plan">Développement Professionnel</h2>
+              <p><strong>Prix :</strong> À partir de 15 000 $</p>
+              <p><strong>Fonctionnalités :</strong></p>
               <ul aria-labelledby="pro-plan">
-                <li>Full-stack development</li>
-                <li>Priority support</li>
-                <li>6 months maintenance</li>
-                <li>API integration</li>
-                <li>Advanced security measures</li>
-                <li>Performance optimization</li>
-                <li>Database design</li>
-                <li>Cloud deployment</li>
+                <li>Développement full-stack</li>
+                <li>Support prioritaire</li>
+                <li>Maintenance pendant 6 mois</li>
+                <li>Intégration d'API</li>
+                <li>Mesures de sécurité avancées</li>
+                <li>Optimisation des performances</li>
+                <li>Conception de base de données</li>
+                <li>Déploiement cloud</li>
               </ul>
               <button
                 class="pricing-btn"
                 aria-label="Contact us about Professional Development Plan"
                 onclick="location.href='mailto:contact@contact.com'"
               >
-                Contact us
+                Nous contacter
               </button>
             </div>
             <div class="pricing-plan">
-              <h2 id="enterprise-plan">Enterprise Solutions</h2>
-              <p><strong>Price:</strong> Contact us for pricing</p>
-              <p><strong>Features:</strong></p>
+              <h2 id="enterprise-plan">Solutions Entreprise</h2>
+              <p><strong>Prix :</strong> Contactez-nous pour un devis</p>
+              <p><strong>Fonctionnalités :</strong></p>
               <ul aria-labelledby="enterprise-plan">
-                <li>Full-stack development</li>
-                <li>24/7 dedicated support</li>
-                <li>12 months maintenance</li>
-                <li>Custom API development</li>
-                <li>Enterprise-grade security</li>
-                <li>Load balancing & scaling</li>
-                <li>Database optimization</li>
-                <li>Multi-cloud deployment</li>
-                <li>Disaster recovery</li>
-                <li>Custom integrations</li>
+                <li>Développement full-stack</li>
+                <li>Support dédié 24/7</li>
+                <li>Maintenance pendant 12 mois</li>
+                <li>Développement d'API sur mesure</li>
+                <li>Sécurité de niveau entreprise</li>
+                <li>Répartition de charge & montée en charge</li>
+                <li>Optimisation de base de données</li>
+                <li>Déploiement multi-cloud</li>
+                <li>Reprise après sinistre</li>
+                <li>Intégrations personnalisées</li>
               </ul>
               <button
                 class="pricing-btn"
                 aria-label="Contact us about Enterprise Solutions Plan"
                 onclick="location.href='mailto:contact@contact.com'"
               >
-                Contact us
+                Nous contacter
               </button>
             </div>
           </div>
         </div>
       </section>
+
       <!-- PRICE SECTION END -->
     </main>
     <!-- MAIN BODY TAG END -->
+
+    <!-- Début footer -->
+    <footer>
+      <nav aria-label="Liens utilitaires">
+        <ul class="footer-menu" style="list-style: none">
+          <li><a href="cookies.html">Legal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+      </nav>
+      <p>
+        &copy; 2025 Accessibilité|cours d'accesibilite . Tous droits réservés.
+      </p>
+    </footer>
   </body>
 </html>

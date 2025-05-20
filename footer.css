@@ -1,16 +1,4 @@
-<!-- Début footer -->
-<footer>
-  <nav aria-label="Liens utilitaires">
-    <ul class="footer-menu" style="list-style: none;">
-      <li><a href="cookies.html">Legal</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="about.html">À propos</a></li>
-    </ul>
-  </nav>
-  <p>&copy; 2025 Accessibilité|cours d'accesibilite . Tous droits réservés.</p>
-</footer>
-<!-- FIN FOOTER -->
-<style>
+
 footer {
   background-color: #055142;
   color: #fff;
@@ -45,5 +33,3 @@ footer {
     gap: 0.5rem;
   }
 }
-</style>
-
