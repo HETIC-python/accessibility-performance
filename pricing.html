@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pricing - page</title>
+    <link rel="stylesheet" href="./navbar.css">
     <!-- <link rel="stylesheet" href="./main.css" /> -->
     <style>
       :root {
@@ -16,14 +17,14 @@
         --background-color: #055142;
         --white: #ffffff;
       }
-      
+
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
         list-style: none;
       }
-      
+
       body {
         font-size: 18px;
         font-family: Arial, sans-serif;
@@ -31,12 +32,12 @@
         color: var(--text-color);
         background-color: var(--background-color);
       }
-      
+
       h1 {
         font-size: 2em;
         margin-bottom: 1rem;
       }
-      
+
       main {
         display: flex;
         flex-direction: column;
@@ -46,7 +47,7 @@
         gap: 4rem;
         width: fit-content;
       }
-      
+
       #pricing-header {
         font-size: 2.5em;
         margin-bottom: 1rem;
@@ -55,7 +56,7 @@
         padding-left: 1rem;
         border-radius: 10px;
       }
-      
+
       .pricing-plans-container {
         display: flex;
         flex-direction: column;
@@ -66,13 +67,13 @@
         gap: 4rem;
         padding: 2rem;
       }
-      
+
       .pricing-table {
         display: flex;
         justify-content: space-around;
         gap: 20px;
       }
-      
+
       .pricing-plan {
         border: 1px solid var(--border-color);
         border-radius: 8px;
@@ -85,31 +86,31 @@
         gap: 1rem;
         background-color: white;
       }
-      
+
       .pricing-plan h2 {
         color: var(--accent-color);
         margin-bottom: 0.5rem;
       }
-      
+
       .pricing-plan p {
         color: var(--text-light);
         margin-bottom: 0.5rem;
       }
-      
-      ul {
+
+     .pricing-table ul {
         width: 100%;
         margin: 1rem 0;
       }
-      
-      li {
+
+     .pricing-table li {
         text-align: left;
         color: var(--text-color);
         padding-left: 35px;
         position: relative;
         margin-bottom: 15px;
       }
-      
-      ul li:before {
+
+     .pricing-table ul li:before {
         content: "";
         position: absolute;
         width: 10px;
@@ -119,7 +120,7 @@
         top: 8px;
         left: 15px;
       }
-      
+
       .pricing-btn {
         background-color: var(--primary-color);
         color: var(--white);
@@ -130,16 +131,16 @@
         font-size: 1em;
         transition: background-color 0.3s ease;
       }
-      
+
       .pricing-btn:hover {
         background-color: var(--primary-dark);
       }
-      
+
       .pricing-btn:focus {
         outline: 3px solid var(--accent-color);
         outline-offset: 2px;
       }
-      
+
       /* Skip to content link for keyboard users */
       .skip-link {
         position: absolute;
@@ -150,17 +151,17 @@
         padding: 8px;
         z-index: 100;
       }
-      
+
       .skip-link:focus {
         top: 0;
       }
-      
+
       /* Responsive design for mobile screens */
       @media (max-width: 768px) {
         .pricing-table {
           flex-direction: column;
         }
-        
+
         main {
           padding: 2rem;
         }
@@ -170,6 +171,28 @@
   <body>
     <!-- Skip to content link for keyboard users -->
     <a href="#pricing-header" class="skip-link">Skip to content</a>
+    <nav aria-label="Menu principal" class="main-nav">
+      <div class="container">
+        <a href="index.html" class="logo">Accessibilité</a>
+        <button
+          class="hamburger"
+          aria-expanded="false"
+          aria-controls="main-menu"
+          aria-label="Ouvrir le menu"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <ul id="main-menu" class="nav-menu" style="list-style: none">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="pricing.html">Tarifs</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="cookies.html">Legal</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- MAIN BODY TAG START -->
     <main id="main-content" aria-labelledby="pricing-header">
