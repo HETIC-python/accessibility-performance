@@ -125,7 +125,6 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       }
       .testimonial-card p {
-        /* font-style: italic; */
         margin-bottom: 10px;
       }
       .testimonial-card cite {
@@ -151,12 +150,13 @@
     </style>
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <header>
       <nav aria-label="Menu principal" class="main-nav">
         <div class="container">
-          <a href="index.html" class="logo">Accessibilité</a>
+          <a href="index.html" class="logo" aria-label="Accessibilité">Accessibilité</a>
           <button
             class="hamburger"
             aria-expanded="false"
@@ -177,37 +177,37 @@
         </div>
       </nav>
     </header>
-    <main role="main">
-      <section id="services" class="container">
+    <main id="containerLandingPage" role="main" aria-label="Contenu principal">
+      <section id="services" class="container" aria-label="Nos services">
         <h2 class="section-title">Ce que nous faisons</h2>
         <div class="row">
-          <div class="col">
-            <div class="feature-icon">💻</div>
+          <div class="col" aria-label="Service : Développement Web">
+            <div class="feature-icon" aria-label="Icône ordinateur">💻</div>
             <h5>Développement Web</h5>
-            <p>
+            <p aria-label="Description du service Développement Web">
               Sites vitrines, e-commerce, applications sur mesure avec les
               dernières technologies (React, Laravel...)
             </p>
           </div>
-          <div class="col">
-            <div class="feature-icon">📱</div>
+          <div class="col" aria-label="Service : Applications mobiles">
+            <div class="feature-icon" aria-label="Icône smartphone">📱</div>
             <h5>Applications Mobiles</h5>
-            <p>
+            <p aria-label="Description du service Applications Mobiles">
               iOS, Android et hybrides avec React Native ou Flutter pour une
               expérience fluide.
             </p>
           </div>
-          <div class="col">
-            <div class="feature-icon">☁️</div>
+          <div class="col" aria-label="Service : Clouds & DevOps">
+            <div class="feature-icon" aria-label="Icône nuage">☁️</div>
             <h5>Cloud & DevOps</h5>
-            <p>
+            <p aria-label="Description du service Clouds & DevOps">
               Déploiement, scalabilité, CI/CD, monitoring avec AWS, Docker,
               Firebase & co.
             </p>
           </div>
         </div>
       </section>
-      <section class="cta-section">
+      <section class="cta-section" aria-label="Entrer en contact">
         <h2>Un projet en tête ?</h2>
         <p>Contactez nos experts pour donner vie à votre vision digitale.</p>
         <a
@@ -216,18 +216,18 @@
           >Nous contacter</a
         >
       </section>
-      <section id="testimonials" class="container">
+      <section id="testimonials" class="container" aria-label="Témoignages">
         <h2 class="section-title">Ce que disent nos clients</h2>
-        <div class="testimonial-grid">
-          <div class="testimonial-card">
+        <div class="testimonial-grid" aria-label="Témoignages clients">
+          <div class="testimonial-card" aria-label="Témoignage de Jean Dupont">
             <p>"NovaDev a transformé notre vision en réalité."</p>
             <cite>— Jean Dupont, CEO de StartUpX</cite>
           </div>
-          <div class="testimonial-card">
+          <div class="testimonial-card" aria-label="Témoignage de Marie Curie">
             <p>"Des solutions sur mesure qui ont boosté notre productivité."</p>
             <cite>— Marie Curie, CTO de Innovatech</cite>
           </div>
-          <div class="testimonial-card">
+          <div class="testimonial-card" aria-label="Témoignage de Paul Martin">
             <p>
               "Une expertise technique impressionnante et un service client
               irréprochable."
@@ -236,18 +236,18 @@
           </div>
         </div>
       </section>
-      <section id="team" class="container py-5">
+      <section id="team" class="container py-5" aria-label="Notre équipe">
         <h2 class="text-center section-title">Rencontrez notre équipe</h2>
-        <div class="row text-center">
-          <div class="col-md-4">
+        <div class="row text-center" aria-label="Membres de l'équipe">
+          <div class="col-md-4" aria-label="Membre de l'équipe Alexandre Dupuis">
             <h5>Alexandre Dupuis</h5>
             <p>CEO & Fondateur</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" aria-label="Membre de l'équipe Sophie Martin">
             <h5>Sophie Martin</h5>
             <p>Lead Développeuse</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" aria-label="Membre de l'équipe Thomas Leroy">
             <h5>Thomas Leroy</h5>
             <p>Responsable DevOps</p>
           </div>
