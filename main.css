@@ -1,6 +1,6 @@
 :root{
     --primary-bg-color: #1d3b0b;
-    --primary-text-color: #ffffff;
+    --primary-text-color: #055142;
     --white:#ffffff;
 }
 * {
@@ -152,7 +152,7 @@ form button {
     padding-right: 1rem;
     padding-left: 1rem;
     border-radius: 10px;
-    color: black;
+    color: #055142;
     display: inline-block;
 }
 
