@@ -21,7 +21,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        list-style: none;
+        /* list-style: none; */
       }
       body {
         font-family: Arial, sans-serif;
@@ -64,6 +64,7 @@
         gap: 4rem;
         padding: 2rem;
       }
+
       .pricing-table {
         display: flex;
         justify-content: space-around;
@@ -81,8 +82,9 @@
         gap: 1rem;
         background-color: #fff;
         justify-content: space-between;
+        list-style: none;
       }
-      
+
       .pricing-plan .pricing-plan-header {
         background-color: var(--white);
         display: flex;
@@ -91,7 +93,19 @@
         /* padding: 1rem; */
       }
 
-      
+      .pricing-plan .details {
+        background-color: var(--white);
+        text-align: left;
+        color: blue;
+      }
+
+      .pricing-plan-footer {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+      }
+
       .pricing-plan h2 {
         color: var(--accent-color);
         margin-bottom: 0.5rem;
@@ -120,6 +134,9 @@
         border-radius: 50%;
         top: 8px;
         left: 15px;
+      }
+      .pricing-plan ul {
+        list-style: none;
       }
       .pricing-btn {
         background-color: var(--primary-color);
@@ -176,11 +193,11 @@
           <span class="hamburger-line"></span>
         </button>
         <ul id="main-menu" class="nav-menu" style="list-style: none">
-          <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">À propos</a></li>
           <li><a href="pricing.html">Tarifs</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="legal.html">Legal</a></li>
+          <li><a href="contact.html">Contactez-nous</a></li>
         </ul>
       </div>
     </nav>
@@ -202,7 +219,6 @@
             <div class="pricing-plan">
               <div class="pricing-plan-header">
                 <h2 id="basic-plan">Développement Basique</h2>
-                <p><strong>Prix :</strong> À partir de 5 000 €</p>
                 <p><strong>Fonctionnalités :</strong></p>
                 <ul aria-labelledby="basic-plan">
                   <li>Développement d'application web</li>
@@ -213,18 +229,24 @@
                   <li>Fonctionnalités de sécurité de base</li>
                 </ul>
               </div>
-              <button
-                class="pricing-btn"
-                aria-label="Contact us about Basic Development Plan"
-                onclick='location.href="mailto:contact@contact.com"'
-              >
-                Nous contacter
-              </button>
+              <div class="pricing-plan-footer">
+                <p>
+                  <strong aria-label="Prix du plan basique">Prix :</strong> À
+                  partir de 2 000 €
+                </p>
+                <button
+                  class="pricing-btn"
+                  aria-label="Nous contacter pour le plan de développement basique à partir de 5000 euros"
+                  onclick='location.href="mailto:contact@contact.com"'
+                  aria-describedby="basic-plan"
+                >
+                  Nous contacter
+                </button>
+              </div>
             </div>
             <div class="pricing-plan">
               <div class="pricing-plan-header">
                 <h2 id="pro-plan">Développement Professionnel</h2>
-                <p><strong>Prix :</strong> À partir de 15 000 €</p>
                 <p><strong>Fonctionnalités :</strong></p>
                 <ul aria-labelledby="pro-plan">
                   <li>Développement full-stack</li>
@@ -237,18 +259,29 @@
                   <li>Déploiement cloud</li>
                 </ul>
               </div>
-              <button
-                class="pricing-btn"
-                aria-label="Contact us about Professional Development Plan"
-                onclick='location.href="mailto:contact@contact.com"'
-              >
-                Nous contacter
-              </button>
+              <div class="pricing-plan-footer">
+                <p>
+                  <strong aria-label="Prix du plan professionnel"
+                    >Prix :</strong
+                  >
+                  À partir de 5 000 €
+                </p>
+                <button
+                  class="pricing-btn"
+                  aria-label="Nous contacter pour le plan de développement professionnel à partir de 15000 euros"
+                  onclick='location.href="mailto:contact@contact.com"'
+                  aria-describedby="pro-plan"
+                >
+                  Nous contacter
+                </button>
+              </div>
             </div>
             <div class="pricing-plan">
               <div class="pricing-plan-header">
-                <h2 id="enterprise-plan">Solutions Entreprise</h2>
-                <p><strong>Prix :</strong> Contactez-nous pour un devis</p>
+                <h2 id="enterprise-plan">
+                  Solutions<br />
+                  Entreprise
+                </h2>
                 <p><strong>Fonctionnalités :</strong></p>
                 <ul aria-labelledby="enterprise-plan">
                   <li>Développement full-stack</li>
@@ -256,20 +289,32 @@
                   <li>Maintenance pendant 12 mois</li>
                   <li>Développement d'API sur mesure</li>
                   <li>Sécurité de niveau entreprise</li>
-                  <li>Répartition de charge & montée en charge</li>
-                  <li>Optimisation de base de données</li>
-                  <li>Déploiement multi-cloud</li>
-                  <li>Reprise après sinistre</li>
-                  <li>Intégrations personnalisées</li>
+                  <details class="details">
+                    <summary>Fonctionnalités avancées...</summary>
+                    <ul>
+                      <li>Répartition de charge & montée en charge</li>
+                      <li>Optimisation de base de données</li>
+                      <li>Déploiement multi-cloud</li>
+                      <li>Reprise après sinistre</li>
+                      <li>Intégrations personnalisées</li>
+                    </ul>
+                  </details>
                 </ul>
               </div>
-              <button
-                class="pricing-btn"
-                aria-label="Contact us about Enterprise Solutions Plan"
-                onclick='location.href="mailto:contact@contact.com"'
-              >
-                Nous contacter
-              </button>
+              <div class="pricing-plan-footer">
+                <p>
+                  <strong aria-label="Prix du plan entreprise">Prix :</strong>
+                  Contactez-nous pour un devis
+                </p>
+                <button
+                  class="pricing-btn"
+                  aria-label="Nous contacter pour le plan de développement entreprise - devis sur mesure"
+                  onclick='location.href="mailto:contact@contact.com"'
+                  aria-describedby="enterprise-plan"
+                >
+                  Nous contacter
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -287,5 +332,24 @@
         &copy; 2025 Accessibilité|cours d'accesibilite . Tous droits réservés.
       </p>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        if (!hamburger || !navMenu) return;
+        hamburger.addEventListener("click", function () {
+          const expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", !expanded);
+          navMenu.classList.toggle("active");
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && navMenu.classList.contains("active")) {
+            hamburger.setAttribute("aria-expanded", "false");
+            navMenu.classList.remove("active");
+            hamburger.focus();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
