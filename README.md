@@ -4,6 +4,14 @@ Bienvenue dans le projet **Accessibilité & Performance** ! Ce dépôt propose u
 
 ---
 
+## L´Équipe
+- **Jiad Abdul**
+- **Paul Charbel**
+- **Faithgot glin-dayi**
+- **Hugo cieplucha**
+- **Ahmat Rouchad**
+- **Siaka doumbia**
+
 ## 🌟 Présentation du projet
 
 Ce projet met en avant les bonnes pratiques en matière de :
