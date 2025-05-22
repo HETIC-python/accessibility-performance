@@ -5,45 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>À propos - Développeurs Web</title>
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="about.css" />
     <link rel="stylesheet" href="footer.css" />
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #055142;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      main {
-        flex: 1;
-        max-width: 800px;
-        margin: 80px auto 40px;
-        padding: 20px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      h1,
-      h2 {
-        color: #055142;
-      }
-      ul {
-        padding-left: 1.5rem;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      a {
-        color: #055142;
-      }
-    </style>
   </head>
   <body>
     <nav aria-label="Menu principal" class="main-nav">
       <div class="container">
-        <a href="pricing.html" class="logo">Accessibilité</a>
+        <a href="index.html" class="logo">Accessibilité</a>
         <button
           class="hamburger"
           aria-expanded="false"
@@ -55,15 +23,15 @@
           <span class="hamburger-line"></span>
         </button>
         <ul id="main-menu" class="nav-menu" style="list-style: none">
+          <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">À propos</a></li>
           <li><a href="pricing.html">Tarifs</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="legal.html">Legal</a></li>
-          <li><a href="contact.html">Contactez-nous</a></li>
         </ul>
       </div>
     </nav>
-    <main role="main" aria-label="Contenu principal">
+    <main class="main" role="main" aria-label="Contenu principal">
       <h1>À propos de nous</h1>
       <p>
         Bonjour ! Nous sommes un groupe de développeurs web passionnés avec
@@ -75,7 +43,7 @@
         Nous proposons une gamme de services adaptés à vos besoins en
         développement web :
       </p>
-      <ul>
+      <ul class="animation-details">
         <li>Développement de sites web sur mesure</li>
         <li>Optimisation des performances et du référencement (SEO)</li>
         <li>Conception d'interfaces utilisateur intuitives</li>
@@ -94,6 +62,13 @@
       </p>
     </main>
     <footer>
+      <nav aria-label="Liens utilitaires">
+        <ul class="footer-menu" style="list-style: none">
+          <li><a href="legal.html">Legal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">À propos</a></li>
+        </ul>
+      </nav>
       <p>
         &copy; 2025 Accessibilité | Cours d'accessibilité. Tous droits réservés.
       </p>
