@@ -5,6 +5,10 @@
   --nav-primary-text-color: #ffffff;
 }
 
+nav {
+  font-family: Arial, Helvetica, "Segoe UI", system-ui, sans-serif;
+}
+
 .main-nav {
   background-color: var(--nav-primary-bg-color);
   padding: 1rem 0;
@@ -27,7 +31,7 @@ nav .container {
   padding-right: 1rem;
 }
 
-.logo {
+nav .container .logo {
   color: var(--nav-primary-text-color);
   font-size: 1.5rem;
   font-weight: bold;
