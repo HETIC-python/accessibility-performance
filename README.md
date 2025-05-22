@@ -1,8 +1,12 @@
 # Projet Web Accessibilité & Performance
 
+> **Une démo en ligne est disponible ici : [https://hetic-python.github.io/accessibility-performance](https://hetic-python.github.io/accessibility-performance)  
+> Découvrez le rendu final, testez la navigation accessible, le responsive et les optimisations de performance en conditions réelles !**
+
 Bienvenue dans le projet **Accessibilité & Performance** ! Ce dépôt propose un modèle de site web moderne, accessible et performant, idéal pour les agences ou développeurs souhaitant présenter leurs services, tarifs et portfolio avec un fort accent sur l’accessibilité web et l’éco-conception.
 
----
+...
+
 
 ## 🌟 Présentation du projet
 
