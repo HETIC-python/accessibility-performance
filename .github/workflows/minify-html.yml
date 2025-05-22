@@ -1,0 +1,42 @@
+name: Minify HTML
+
+on:
+  push:
+    branches:
+      - main
+      
+permissions:
+  contents: write
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install html-minifier-terser
+        run: npm install -g html-minifier-terser
+
+      - name: Minify HTML files
+        run: |
+          mkdir -p dist
+          for file in $(find . -name '*.html'); do
+            html-minifier-terser "$file" -o "dist/$(basename "$file")" \
+              --collapse-whitespace --remove-comments --minify-css true --minify-js true
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          cp dist/*.html .
+          git add *.html
+          git commit -m "Minify HTML [auto]" || echo "Nothing to commit"
+          git push

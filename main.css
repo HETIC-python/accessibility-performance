@@ -1,6 +1,7 @@
 :root{
     --primary-bg-color: #1d3b0b;
     --primary-text-color: #ffffff;
+    --white:#ffffff;
 }
 * {
     margin: 0;
@@ -142,6 +143,17 @@ form button {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+}
+
+#contact-header {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
 }
 
 .contact-header {
