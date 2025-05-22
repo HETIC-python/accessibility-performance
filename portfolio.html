@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portfolio - Page</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        :root {
+            --primary-color: #8a3cc9;
+            --primary-dark: #8a3cc9;
+            --text-color: #055142;
+            --text-light: #555;
+            --accent-color: #8a3cc9;
+            --border-color: #ccc;
+            --background-color: #055142;
+            --white: #ffffff
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh
+        }
+
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 80px auto 40px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+        }
+
+        h1,
+        h2 {
+            color: var(--text-color)
+        }
+
+        ul {
+            padding-left: 1.5rem
+        }
+
+        li {
+            margin-bottom: 10px
+        }
+
+        a {
+            color: var(--text-color)
+        }
+
+        details {
+            display: flex;
+            flex-direction: row;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            
+            ::marker {
+                content: '';
+            }
+
+            summary {
+                padding: 1rem 1em;
+                flex-shrink: 0;
+            }
+
+            .details-content-wrapper {
+                padding: 1.5rem 1em;
+                width: 300px;
+            }
+        }
+
+        summary:hover, details:not([open]):hover {
+                cursor: pointer
+            }
+
+        details[open] summary~* {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .accordion-wrapper{
+            display: flex;
+            gap: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Menu principal" class="main-nav">
+        <div class="container"><a href="index.html" class="logo">Accessibilité</a> <button class="hamburger"
+                aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu"><span
+                    class="hamburger-line"></span> <span class="hamburger-line"></span> <span
+                    class="hamburger-line"></span></button>
+            <ul id="main-menu" class="nav-menu" style="list-style:none">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="pricing.html">Tarifs</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="legal.html">Legal</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main" aria-label="Contenu principal">
+        <h1>Clients</h1>
+        <div class="accordion-wrapper" style="flex-direction: column;">
+            <details name="accordion" id="techcorp">
+                <summary>
+                    <h3><span>💻</span>TechCorp Solutions </h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Developed cutting-edge software solutions for clients, focusing on scalability and user experience.</p>
+                </div>
+            </details>
+            <details name="accordion" id="greenenergy">
+                <summary>
+                    <h3><span>🌱</span>GreenEnergy Inc.</h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Collaborated on renewable energy projects, optimizing solar panel efficiency and sustainability.</p>
+                </div>
+            </details>
+            <details name="accordion" id="designstudio">
+                <summary>
+                    <h3><span>🎨</span>DesignStudio Pro</h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Created innovative UI/UX designs for mobile and web applications, enhancing user engagement.</p>
+                </div>
+            </details>
+            <details name="accordion" id="fintech">
+                <summary>
+                    <h3><span>💰</span>FinTech Innovators</h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Engineered secure financial platforms, enabling seamless transactions and data protection.</p>
+                </div>
+            </details>
+            <details name="accordion" id="healthtech">
+                <summary>
+                    <h3><span>🏥</span>HealthTech Solutions</h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Developed telemedicine applications, improving patient access to healthcare services.</p>
+                </div>
+        </div>
+        </script>
+    </main>
+    <footer>
+        <nav aria-label="Liens utilitaires">
+            <ul class="footer-menu" style="list-style:none">
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Accessibilité | Cours d'accessibilité. Tous droits réservés.</p>
+    </footer>
+    <script>document.addEventListener("DOMContentLoaded", (function () { const e = document.querySelector(".hamburger"), t = document.querySelector(".nav-menu"); e && t && (e.addEventListener("click", (function () { const e = "true" === this.getAttribute("aria-expanded"); this.setAttribute("aria-expanded", !e), t.classList.toggle("active") })), document.addEventListener("keydown", (function (n) { "Escape" === n.key && t.classList.contains("active") && (e.setAttribute("aria-expanded", "false"), t.classList.remove("active"), e.focus()) }))) }))</script>
+</body>
+
+</html>
