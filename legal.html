@@ -61,9 +61,6 @@
         font-style: normal;
       }
       @media (max-width: 600px) {
-        main {
-          /* padding: 1rem 0.5rem; */
-        }
         h1 {
           font-size: 2rem;
         }
@@ -71,7 +68,6 @@
           font-size: 1.3rem;
         }
       }
-      /* Menu styles (tu peux garder ton navbar.css si tu veux) */
       footer {
         background: var(--primary-bg-color);
         color: var(--primary-text-color);
@@ -83,7 +79,6 @@
     <link rel="stylesheet" href="navbar.css" />
   </head>
   <body>
-    <!-- Début header John Doe -->
     <header>
       <nav aria-label="Menu principal" class="main-nav">
         <div class="container">
@@ -108,17 +103,17 @@
         </div>
       </nav>
     </header>
-    <!-- Fin header John Doe -->
-
     <main role="main">
       <h1>Mentions légales</h1>
       <section>
         <h2>Éditeur du site</h2>
         <p>
-          <strong>Nom du site :</strong> Projet Web Accessible et Optimisé<br />
-          <strong>Responsable de la publication :</strong> Groupe 2<br />
-          <strong>Adresse :</strong>HETIC, France<br />
-          <strong>Email :</strong>
+          <strong>Nom du site :</strong> Projet Web Accessible et Optimisé<br /><strong
+            >Responsable de la publication :</strong
+          >
+          Groupe 2<br /><strong>Adresse :</strong>HETIC, France<br /><strong
+            >Email :</strong
+          >
           <a href="mailto:contact@projet-accessible.fr"
             >contact@projet-accessible.fr</a
           >
@@ -127,10 +122,11 @@
       <section>
         <h2>Hébergement</h2>
         <p>
-          <strong>Hébergeur :</strong> GitHub Pages<br />
-          <strong>Adresse :</strong> GitHub Inc., 88 Colin P Kelly Jr St, San
-          Francisco, CA 94107, États-Unis<br />
-          <strong>Site web :</strong>
+          <strong>Hébergeur :</strong> GitHub Pages<br /><strong
+            >Adresse :</strong
+          >
+          GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107,
+          États-Unis<br /><strong>Site web :</strong>
           <a href="https://pages.github.com/" target="_blank" rel="noopener"
             >https://pages.github.com/</a
           >
@@ -141,13 +137,10 @@
         <p>
           Ce site a été réalisé dans le cadre de la formation "Projet web
           accessible et optimisé" (Avril/Mai 2025), sous la direction de JIAD
-          Abdul Valérian.<br />
-          <strong>Déclaration d’activité :</strong> 328002XXXXX auprès du préfet
-          de région ILE-DE-FRANCE.
+          Abdul Valérian.<br /><strong>Déclaration d’activité :</strong>
+          328002XXXXX auprès du préfet de région ILE-DE-FRANCE.
         </p>
-        <p>
-          <strong>Équipe projet :</strong>
-        </p>
+        <p><strong>Équipe projet :</strong></p>
         <ul>
           <li>JIAD Abdul</li>
           <li>PAUL Charbel</li>
@@ -161,9 +154,8 @@
         <h2>Accessibilité</h2>
         <p>
           Ce site vise à respecter les normes d’accessibilité numérique (WCAG
-          2.1 niveau AA/AAA).<br />
-          Pour toute suggestion ou signalement d’un problème d’accessibilité,
-          contactez-nous à
+          2.1 niveau AA/AAA).<br />Pour toute suggestion ou signalement d’un
+          problème d’accessibilité, contactez-nous à
           <a href="mailto:accessibilite@projet-accessible.fr"
             >accessibilite@projet-accessible.fr</a
           >.
@@ -173,26 +165,24 @@
         <h2>Propriété intellectuelle</h2>
         <p>
           Sauf mention contraire, les contenus (textes, images, code source)
-          sont la propriété exclusive de l’équipe projet.<br />
-          Toute reproduction, adaptation ou diffusion sans autorisation
-          préalable est interdite, sauf pour un usage pédagogique ou non
-          commercial, avec mention de la source.
+          sont la propriété exclusive de l’équipe projet.<br />Toute
+          reproduction, adaptation ou diffusion sans autorisation préalable est
+          interdite, sauf pour un usage pédagogique ou non commercial, avec
+          mention de la source.
         </p>
       </section>
       <section>
         <h2>Protection des données personnelles</h2>
         <p>
           Ce site ne collecte aucune donnée personnelle sans votre
-          consentement.<br />
-          Les seuls cookies utilisés sont essentiels au fonctionnement du site
-          ou à la mesure d’audience anonyme <br />
-          Pour toute demande relative à vos données, contactez-nous à
+          consentement.<br />Les seuls cookies utilisés sont essentiels au
+          fonctionnement du site ou à la mesure d’audience anonyme<br />Pour
+          toute demande relative à vos données, contactez-nous à
           <a href="mailto:rgpd@projet-accessible.fr"
             >rgpd@projet-accessible.fr</a
           >.
         </p>
       </section>
-
       <section>
         <h2>Limitation de responsabilité</h2>
         <p>
@@ -223,21 +213,22 @@
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-        if (!hamburger || !navMenu) return;
-        hamburger.addEventListener("click", function () {
-          const expanded = this.getAttribute("aria-expanded") === "true";
-          this.setAttribute("aria-expanded", !expanded);
-          navMenu.classList.toggle("active");
-        });
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && navMenu.classList.contains("active")) {
-            hamburger.setAttribute("aria-expanded", "false");
-            navMenu.classList.remove("active");
-            hamburger.focus();
-          }
-        });
+        const e = document.querySelector(".hamburger"),
+          t = document.querySelector(".nav-menu");
+        e &&
+          t &&
+          (e.addEventListener("click", function () {
+            const e = "true" === this.getAttribute("aria-expanded");
+            this.setAttribute("aria-expanded", !e),
+              t.classList.toggle("active");
+          }),
+          document.addEventListener("keydown", function (n) {
+            "Escape" === n.key &&
+              t.classList.contains("active") &&
+              (e.setAttribute("aria-expanded", "false"),
+              t.classList.remove("active"),
+              e.focus());
+          }));
       });
     </script>
   </body>
