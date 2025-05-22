@@ -242,4 +242,7 @@ button:hover {
     .contact-content {
         grid-template-columns: 1fr;
     }
+    #containerLandingPage{
+        width: 90%;
+    }
 }
