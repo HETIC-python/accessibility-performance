@@ -1,11 +1,13 @@
 :root{
     --primary-bg-color: #1d3b0b;
     --primary-text-color: #ffffff;
+    --white:#ffffff;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
@@ -128,4 +130,116 @@ form button {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+.container  .contact-content {
+    background-color: #f5f5f5;
+    line-height: 1.8; /* Augmenter le line-height pour une meilleure lisibilité */
+    color: #333; /* Assurer un contraste suffisant */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#contact-header {
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    padding: 1rem;
+}
+
+.contact-info h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.contact-form {
+    padding: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
 }

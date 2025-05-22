@@ -1,6 +1,8 @@
 
 :root {
   --primary-bg-color: #055142;
+
+  --primary-bg-color: #055142;
   --primary-text-color: #ffffff;
 }
 
@@ -8,14 +10,17 @@
   background-color: var(--primary-bg-color);
   padding: 1rem 0;
   list-style: none;
-
+  font-size: 1rem !important;
 }
 
 .main-nav .container {
+  font-size: 1rem !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .logo {
