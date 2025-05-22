@@ -1,130 +1,134 @@
-
 <nav aria-label="Menu principal" class="main-nav">
-  <div class="container">
-    <a href="index.html" class="logo">Accessibilité</a>
-    <button class="hamburger" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-    <ul id="main-menu" class="nav-menu" style="list-style: none;">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="about.html">À propos</a></li>
-      <li><a href="pricing.html">Tarifs</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="cookies.html">Legal</a></li>
-    </ul>
-  </div>
+    <div class="container">
+        <a href="index.html" class="logo">Accessibilité</a>
+        <button
+            class="hamburger"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Ouvrir le menu"
+        >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+        <ul id="main-menu" class="nav-menu" style="list-style: none">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="pricing.html">Tarifs</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="cookies.html">Mentions Légales</a></li>
+        </ul>
+    </div>
 </nav>
 
 <style>
-:root {
-  --primary-bg-color: #055142;
-  --primary-text-color: #ffffff;
-}
+    :root {
+        --primary-bg-color: #055142;
+        --primary-text-color: #ffffff;
+    }
 
-.main-nav {
-  background-color: var(--primary-bg-color);
-  padding: 1rem 0;
-}
+    .main-nav {
+        background-color: var(--primary-bg-color);
+        padding: 1rem 0;
+    }
 
-.main-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+    .main-nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-.logo {
-  color: var(--primary-text-color);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-}
+    .logo {
+        color: var(--primary-text-color);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
 
-.hamburger {
-  display: none;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-}
+    .hamburger {
+        display: none;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
 
-.hamburger-line {
-  display: block;
-  width: 28px;
-  height: 4px;
-  margin: 5px 0;
-  background-color: var(--primary-text-color);
-  border-radius: 2px;
-}
+    .hamburger-line {
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 5px 0;
+        background-color: var(--primary-text-color);
+        border-radius: 2px;
+    }
 
-.nav-menu {
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-}
+    .nav-menu {
+        display: flex;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
 
-.nav-menu a {
-  color: var(--primary-text-color);
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background .2s;
-}
+    .nav-menu a {
+        color: var(--primary-text-color);
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
 
-.nav-menu a:hover, .nav-menu a:focus {
-  background: rgba(255,255,255,0.12);
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+        background: rgba(255, 255, 255, 0.12);
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  .nav-menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background: var(--primary-bg-color);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    z-index: 100;
-  }
-  .nav-menu.active {
-    display: flex;
-  }
-  .main-nav .container {
-    position: relative;
-  }
-  .nav-menu li {
-    text-align: center;
-    margin: 0.5rem 0;
-  }
-}
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
+        .nav-menu {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            background: var(--primary-bg-color);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            z-index: 100;
+        }
+        .nav-menu.active {
+            display: flex;
+        }
+        .main-nav .container {
+            position: relative;
+        }
+        .nav-menu li {
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+    }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
-  if (!hamburger || !navMenu) return;
-  hamburger.addEventListener('click', function() {
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
-    navMenu.classList.toggle('active');
-  });
- 
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-      hamburger.setAttribute('aria-expanded', 'false');
-      navMenu.classList.remove('active');
-      hamburger.focus();
-    }
-  });
-});
-</script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        if (!hamburger || !navMenu) return;
+        hamburger.addEventListener("click", function () {
+            const expanded = this.getAttribute("aria-expanded") === "true";
+            this.setAttribute("aria-expanded", !expanded);
+            navMenu.classList.toggle("active");
+        });
 
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && navMenu.classList.contains("active")) {
+                hamburger.setAttribute("aria-expanded", "false");
+                navMenu.classList.remove("active");
+                hamburger.focus();
+            }
+        });
+    });
+</script>
