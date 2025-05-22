@@ -1,13 +1,12 @@
 
 :root {
-  --primary-bg-color: #055142;
+  --nav-primary-bg-color: #055142;
 
-  --primary-bg-color: #055142;
-  --primary-text-color: #ffffff;
+  --nav-primary-text-color: #ffffff;
 }
 
 .main-nav {
-  background-color: var(--primary-bg-color);
+  background-color: var(--nav-primary-bg-color);
   padding: 1rem 0;
   list-style: none;
   font-size: 1rem !important;
@@ -29,7 +28,7 @@ nav .container {
 }
 
 .logo {
-  color: var(--primary-text-color);
+  color: var(--nav-primary-text-color);
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -48,7 +47,7 @@ nav .container {
   width: 28px;
   height: 4px;
   margin: 5px 0;
-  background-color: var(--primary-text-color);
+  background-color: var(--nav-primary-text-color);
   border-radius: 2px;
 }
 
@@ -60,7 +59,7 @@ nav .container {
 }
 
 .nav-menu a {
-  color: var(--primary-text-color);
+  color: var(--nav-primary-text-color);
   text-decoration: none;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
@@ -81,7 +80,7 @@ nav .container {
     display: none;
     width: 100%;
     flex-direction: column;
-    background: var(--primary-bg-color);
+    background: var(--nav-primary-bg-color);
     position: absolute;
     top: 60px;
     left: 0;
