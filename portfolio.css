@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #8a3cc9;
+    --primary-dark: #8a3cc9;
+    --text-color: #055142;
+    --text-light: #555;
+    --accent-color: #8a3cc9;
+    --border-color: #ccc;
+    --background-color: #055142;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    max-width: 800px;
+    margin: 80px auto 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: var(--text-color);
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+a {
+    color: var(--text-color);
+}
+
+details {
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+
+    = ::marker {
+        content: "";
+    }
+
+    summary {
+        padding: 1rem 1em;
+        flex-shrink: 0;
+    }
+
+    .details-content-wrapper {
+        padding: 1.5rem 1em;
+        width: 300px;
+    }
+}
+
+summary:hover,
+details:not([open]):hover {
+    cursor: pointer;
+}
+
+details[open] summary ~ * {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.accordion-wrapper {
+    display: flex;
+    gap: 1rem;
+}
