@@ -9,63 +9,65 @@
         <link rel="stylesheet" href="footer.css" />
     </head>
     <body>
-        <nav aria-label="Menu principal" class="main-nav">
-            <div class="container">
-                <a href="index.html" class="logo">Accessibilité</a>
-                <button
-                    class="hamburger"
-                    aria-expanded="false"
-                    aria-controls="main-menu"
-                    aria-label="Ouvrir le menu"
-                >
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-                <ul id="main-menu" class="nav-menu" style="list-style: none">
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="pricing.html">Tarifs</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li>
-                        <a href="legal.html">Mentions Légales</a>
-                    </li>
-                    <li><a href="contact.html">Contactez-nous</a></li>
-                </ul>
-            </div>
-        </nav>
-        <main>
+        <header role="banner">
+            <nav aria-label="Menu principal" class="main-nav">
+                <div class="container">
+                    <a href="index.html" class="logo">Accessibilité</a>
+                    <button
+                        class="hamburger"
+                        aria-expanded="false"
+                        aria-controls="main-menu"
+                        aria-label="Ouvrir le menu de navigation"
+                    >
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                    <ul id="main-menu" class="nav-menu" style="list-style: none" role="menubar">
+                        <li role="none"><a role="menuitem" href="about.html">À propos</a></li>
+                        <li role="none"><a role="menuitem" href="pricing.html">Tarifs</a></li>
+                        <li role="none"><a role="menuitem" href="portfolio.html">Portfolio</a></li>
+                        <li role="none"><a role="menuitem" href="legal.html">Mentions Légales</a></li>
+                        <li role="none"><a role="menuitem" href="contact.html">Contactez-nous</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main id="main-content" role="main" aria-label="Contenu principal" tabindex="-1">
             <section aria-labelledby="contact-intro-header">
                 <div class="container">
                     <div class="contact-content">
                         <div class="contact-info">
-                            <h2>Informations de contact</h2>
-                            <div class="info-item">
-                                <i aria-hidden="true">📍</i>
-                                <p>
-                                    25 RUE DE LA VALLEE,<br />80132 CAHON,
-                                    France
-                                </p>
-                            </div>
-                            <div class="info-item">
-                                <i aria-hidden="true">📞</i>
-                                <p>+33 x xx xx xx xx</p>
-                            </div>
-                            <div class="info-item">
-                                <i aria-hidden="true">✉️</i>
-                                <p>contact@Y.fr</p>
-                            </div>
-                            <div class="info-item">
-                                <i aria-hidden="true">🕒</i>
-                                <p>
-                                    Lundi - Vendredi: 9h00 - 18h00<br />Samedi:
-                                    9h00 - 12h00<br />Dimanche: Fermé
-                                </p>
-                            </div>
+                            <h2 id="contact-intro-header">Informations de contact</h2>
+                            <address>
+                                <div class="info-item">
+                                    <i aria-hidden="true">📍</i>
+                                    <p>
+                                        25 RUE DE LA VALLEE,<br />80132 CAHON,
+                                        France
+                                    </p>
+                                </div>
+                                <div class="info-item">
+                                    <i aria-hidden="true">📞</i>
+                                    <p>+33 x xx xx xx xx</p>
+                                </div>
+                                <div class="info-item">
+                                    <i aria-hidden="true">✉️</i>
+                                    <p>contact@Y.fr</p>
+                                </div>
+                                <div class="info-item">
+                                    <i aria-hidden="true">🕒</i>
+                                    <p>
+                                        Lundi - Vendredi: 9h00 - 18h00<br />Samedi:
+                                        9h00 - 12h00<br />Dimanche: Fermé
+                                    </p>
+                                </div>
+                            </address>
                         </div>
                         <div class="contact-form">
                             <h2>Envoyez-nous un message</h2>
                             <form id="contactForm">
-                                <div class="form-group">
+</h2>                                <div class="form-group">
                                     <label for="name"
                                         >Nom complet
                                         <span aria-hidden="true">*</span></label
@@ -131,17 +133,19 @@
                     </div>
                 </div>
             </section>
-            <footer>
-                <nav aria-label="Liens utilitaires">
-                    <ul class="footer-menu" style="list-style: none">
-                        <li><a href="legal.html">Mentions Légales</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="about.html">À propos</a></li>
-                    </ul>
-                </nav>
+        </main>
+        <footer role="contentinfo">
+            <nav aria-label="Liens utilitaires">
+                <ul class="footer-menu" style="list-style: none">
+                    <li><a href="legal.html">Mentions Légales</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                </ul>
+            </nav>
+            <p>
                 &copy; 2025 Projet Web Accessible et Optimisé - Tous droits
                 réservés
-            </footer>
-        </main>
+            </p>
+        </footer>
     </body>
 </html>

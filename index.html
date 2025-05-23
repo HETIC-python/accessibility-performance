@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <header>
+        <header role="banner">
             <nav aria-label="Menu principal" class="main-nav">
                 <div class="container">
                     <a href="index.html" class="logo" aria-label="Accessibilité"
@@ -20,7 +20,7 @@
                         class="hamburger"
                         aria-expanded="false"
                         aria-controls="main-menu"
-                        aria-label="Ouvrir le menu"
+                        aria-label="Ouvrir le menu de navigation"
                     >
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
@@ -30,12 +30,13 @@
                         id="main-menu"
                         class="nav-menu"
                         style="list-style: none"
+                        role="menubar"
                     >
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="pricing.html">Tarifs</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="legal.html">Mentions Légales</a></li>
-                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li role="none"><a role="menuitem" href="about.html">À propos</a></li>
+                        <li role="none"><a role="menuitem" href="pricing.html">Tarifs</a></li>
+                        <li role="none"><a role="menuitem" href="portfolio.html">Portfolio</a></li>
+                        <li role="none"><a role="menuitem" href="legal.html">Mentions Légales</a></li>
+                        <li role="none"><a role="menuitem" href="contact.html">Contactez-nous</a></li>
                     </ul>
                 </div>
             </nav>
@@ -44,51 +45,45 @@
             id="containerLandingPage"
             role="main"
             aria-label="Contenu principal"
+            tabindex="-1"
         >
-            <section id="services" class="container" aria-label="Nos services">
-                <h2 class="section-title">Ce que nous faisons</h2>
+            <section id="services" class="container" aria-labelledby="services-title">
+                <h2 class="section-title" id="services-title">Ce que nous faisons</h2>
                 <div class="row">
-                    <div class="col" aria-label="Service : Développement Web">
-                        <div class="feature-icon" aria-label="Icône ordinateur">
+                    <div class="col">
+                        <div class="feature-icon" aria-hidden="true">
                             💻
                         </div>
                         <h5>Développement Web</h5>
-                        <p
-                            aria-label="Description du service Développement Web"
-                        >
+                        <p></p>
                             Sites vitrines, e-commerce, applications sur mesure
                             avec les dernières technologies (React, Laravel...)
                         </p>
                     </div>
-                    <div
-                        class="col"
-                        aria-label="Service : Applications mobiles"
-                    >
-                        <div class="feature-icon" aria-label="Icône smartphone">
+                    <div class="col">
+                        <div class="feature-icon" aria-hidden="true">
                             📱
                         </div>
                         <h5>Applications Mobiles</h5>
-                        <p
-                            aria-label="Description du service Applications Mobiles"
-                        >
+                        <p>
                             iOS, Android et hybrides avec React Native ou
                             Flutter pour une expérience fluide.
                         </p>
                     </div>
-                    <div class="col" aria-label="Service : Clouds & DevOps">
-                        <div class="feature-icon" aria-label="Icône nuage">
+                    <div class="col">
+                        <div class="feature-icon" aria-hidden="true">
                             ☁️
                         </div>
                         <h5>Cloud & DevOps</h5>
-                        <p aria-label="Description du service Clouds & DevOps">
+                        <p>
                             Déploiement, scalabilité, CI/CD, monitoring avec
                             AWS, Docker, Firebase & co.
                         </p>
                     </div>
                 </div>
             </section>
-            <section class="cta-section" aria-label="Entrer en contact">
-                <h2>Un projet en tête ?</h2>
+            <section class="cta-section" aria-labelledby="cta-title">
+                <h2 id="cta-title">Un projet en tête ?</h2>
                 <p>
                     Contactez nos experts pour donner vie à votre vision
                     digitale.
@@ -102,20 +97,18 @@
             <section
                 id="testimonials"
                 class="container"
-                aria-label="Témoignages"
+                aria-labelledby="testimonials-title"
             >
-                <h2 class="section-title">Ce que disent nos clients</h2>
-                <div class="testimonial-grid" aria-label="Témoignages clients">
+                <h2 class="section-title" id="testimonials-title">Ce que disent nos clients</h2>
+                <div class="testimonial-grid">
                     <div
                         class="testimonial-card"
-                        aria-label="Témoignage de Jean Dupont"
                     >
                         <p>"NovaDev a transformé notre vision en réalité."</p>
                         <cite>— Jean Dupont, CEO de StartUpX</cite>
                     </div>
                     <div
                         class="testimonial-card"
-                        aria-label="Témoignage de Marie Curie"
                     >
                         <p>
                             "Des solutions sur mesure qui ont boosté notre
@@ -125,7 +118,6 @@
                     </div>
                     <div
                         class="testimonial-card"
-                        aria-label="Témoignage de Paul Martin"
                     >
                         <p>
                             "Une expertise technique impressionnante et un
@@ -135,28 +127,25 @@
                     </div>
                 </div>
             </section>
-            <section id="team" class="container py-5" aria-label="Notre équipe">
-                <h2 class="text-center section-title">
+            <section id="team" class="container py-5" aria-labelledby="team-title">
+                <h2 class="text-center section-title" id="team-title">
                     Rencontrez notre équipe
                 </h2>
-                <div class="row text-center" aria-label="Membres de l'équipe">
+                <div class="row text-center">
                     <div
                         class="col-md-4"
-                        aria-label="Membre de l'équipe Alexandre Dupuis"
                     >
                         <h5>Alexandre Dupuis</h5>
                         <p>CEO & Fondateur</p>
                     </div>
                     <div
                         class="col-md-4"
-                        aria-label="Membre de l'équipe Sophie Martin"
                     >
                         <h5>Sophie Martin</h5>
                         <p>Lead Développeuse</p>
                     </div>
                     <div
                         class="col-md-4"
-                        aria-label="Membre de l'équipe Thomas Leroy"
                     >
                         <h5>Thomas Leroy</h5>
                         <p>Responsable DevOps</p>
@@ -170,7 +159,7 @@
                 >↑ Haut de page</a
             >
         </main>
-        <footer>
+        <footer role="contentinfo">
             <nav aria-label="Liens utilitaires">
                 <ul class="footer-menu" style="list-style: none">
                     <li><a href="legal.html">Mentions Légales</a></li>

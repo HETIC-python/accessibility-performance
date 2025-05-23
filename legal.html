@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="legal.css" />
     </head>
     <body>
-        <header>
+        <header role="banner">
             <nav aria-label="Menu principal" class="main-nav">
                 <div class="container">
                     <a href="index.html" class="logo">Accessibilité</a>
@@ -16,28 +16,27 @@
                         class="hamburger"
                         aria-expanded="false"
                         aria-controls="main-menu"
-                        aria-label="Ouvrir le menu"
+                        aria-label="Ouvrir le menu de navigation"
                     >
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                     </button>
-                    <ul id="main-menu" class="nav-menu">
-                        <li><a href="about.html">À propos</a></li>
-                        <li><a href="pricing.html">Tarifs</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li>
-                            <a href="legal.html" aria-current="page"
+                    <ul id="main-menu" class="nav-menu" role="menubar">
+                        <li role="none"><a role="menuitem" href="about.html">À propos</a></li>
+                        <li role="none"><a role="menuitem" href="pricing.html">Tarifs</a></li>
+                        <li role="none"><a role="menuitem" href="portfolio.html">Portfolio</a></li>
+                        <li role="none">
+                            <a role="menuitem" href="legal.html" aria-current="page"
                                 >Mentions Légales</a
                             >
                         </li>
-
-                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li role="none"><a role="menuitem" href="contact.html">Contactez-nous</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <main role="main">
+        <main id="main-content" role="main" aria-label="Contenu principal" tabindex="-1">
             <h1>Mentions Légales</h1>
             <section>
                 <h2>Éditeur du site</h2>
@@ -154,11 +153,10 @@
                 </ul>
             </section>
         </main>
-        <footer>
+        <footer role="contentinfo">
             <nav aria-label="Liens utilitaires">
                 <ul class="footer-menu" style="list-style: none">
                     <li><a href="legal.html">Mentions Légales</a></li>
-
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="about.html">À propos</a></li>
                 </ul>
