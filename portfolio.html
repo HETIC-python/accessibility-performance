@@ -7,102 +7,8 @@
     <title>Portfolio - Page</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
-    <style>
-        :root {
-            --primary-color: #8a3cc9;
-            --primary-dark: #8a3cc9;
-            --text-color: #055142;
-            --text-light: #555;
-            --accent-color: #8a3cc9;
-            --border-color: #ccc;
-            --background-color: #055142;
-            --white: #ffffff
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-light);
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh
-        }
-
-        main {
-            flex: 1;
-            max-width: 800px;
-            margin: 80px auto 40px;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .1)
-        }
-
-        h1,
-        h2 {
-            color: var(--text-color)
-        }
-
-        ul {
-            padding-left: 1.5rem
-        }
-
-        li {
-            margin-bottom: 10px
-        }
-
-        a {
-            color: var(--text-color)
-        }
-
-        details {
-            display: flex;
-            flex-direction: row;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            
-            ::marker {
-                content: '';
-            }
-
-            summary {
-                padding: 1rem 1em;
-                flex-shrink: 0;
-            }
-
-            .details-content-wrapper {
-                padding: 1.5rem 1em;
-                width: 300px;
-            }
-        }
-
-        summary:hover, details:not([open]):hover {
-                cursor: pointer
-            }
-
-        details[open] summary~* {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-
-        .accordion-wrapper{
-            display: flex;
-            gap: 1rem;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
@@ -123,20 +29,20 @@
           <li><a href="about.html">À propos</a></li>
           <li><a href="pricing.html">Tarifs</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="legal.html">Legal</a></li>
+          <li><a href="legal.html">Mentions Légales</a></li>
           <li><a href="contact.html">Contactez-nous</a></li>
         </ul>
       </div>
     </nav>
     <main role="main" aria-label="Contenu principal">
-        <h1>Clients</h1>
+        <h1>Nos clients</h1>
         <div class="accordion-wrapper" style="flex-direction: column;">
             <details name="accordion" id="techcorp">
                 <summary>
-                    <h3><span>💻</span>TechCorp Solutions </h3>
+                    <h3><span>💻</span>TechCorp Solutions</h3>
                 </summary>
                 <div class="details-content-wrapper">
-                    <p>Developed cutting-edge software solutions for clients, focusing on scalability and user experience.</p>
+                    <p>Développement de solutions logicielles innovantes pour les clients, axées sur l’évolutivité et l’expérience utilisateur.</p>
                 </div>
             </details>
             <details name="accordion" id="greenenergy">
@@ -144,7 +50,7 @@
                     <h3><span>🌱</span>GreenEnergy Inc.</h3>
                 </summary>
                 <div class="details-content-wrapper">
-                    <p>Collaborated on renewable energy projects, optimizing solar panel efficiency and sustainability.</p>
+                    <p>Collaboration sur des projets d’énergie renouvelable, optimisation de l’efficacité des panneaux solaires et de la durabilité.</p>
                 </div>
             </details>
             <details name="accordion" id="designstudio">
@@ -152,7 +58,7 @@
                     <h3><span>🎨</span>DesignStudio Pro</h3>
                 </summary>
                 <div class="details-content-wrapper">
-                    <p>Created innovative UI/UX designs for mobile and web applications, enhancing user engagement.</p>
+                    <p>Création de designs UI/UX innovants pour applications mobiles et web, améliorant l’engagement des utilisateurs.</p>
                 </div>
             </details>
             <details name="accordion" id="fintech">
@@ -160,7 +66,7 @@
                     <h3><span>💰</span>FinTech Innovators</h3>
                 </summary>
                 <div class="details-content-wrapper">
-                    <p>Engineered secure financial platforms, enabling seamless transactions and data protection.</p>
+                    <p>Conception de plateformes financières sécurisées, permettant des transactions fluides et la protection des données.</p>
                 </div>
             </details>
             <details name="accordion" id="healthtech">
@@ -168,15 +74,40 @@
                     <h3><span>🏥</span>HealthTech Solutions</h3>
                 </summary>
                 <div class="details-content-wrapper">
-                    <p>Developed telemedicine applications, improving patient access to healthcare services.</p>
+                    <p>Développement d’applications de télémédecine, facilitant l’accès des patients aux services de santé.</p>
                 </div>
+            </details>
+            <details name="accordion" id="edutech">
+                <summary>
+                    <h3><span>📚</span>EduTech Labs</h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Mise en place de plateformes d’e-learning, améliorant l’accessibilité et l’interactivité des apprentissages.</p>
+                </div>
+            </details>
+            <details name="accordion" id="retailplus">
+                <summary>
+                    <h3><span>🛒</span>RetailPlus</h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Optimisation des processus e-commerce, améliorant la performance du site et la satisfaction client.</p>
+                </div>
+            </details>
+            <details name="accordion" id="citysmart">
+                <summary>
+                    <h3><span>🏙️</span>CitySmart Services</h3>
+                </summary>
+                <div class="details-content-wrapper">
+                    <p>Développement de solutions pour villes intelligentes, facilitant la gestion urbaine et l’engagement citoyen.</p>
+                </div>
+            </details>
         </div>
         </script>
     </main>
     <footer>
         <nav aria-label="Liens utilitaires">
             <ul class="footer-menu" style="list-style:none">
-                <li><a href="legal.html">Legal</a></li>
+                <li><a href="legal.html">Mentions Légales</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="about.html">À propos</a></li>
             </ul>
