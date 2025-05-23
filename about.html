@@ -24,46 +24,82 @@
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                     </button>
-                    <ul id="main-menu" class="nav-menu" style="list-style: none" role="menubar">
-                        <li role="none"><a role="menuitem" href="about.html">À propos</a></li>
-                        <li role="none"><a role="menuitem" href="pricing.html">Tarifs</a></li>
-                        <li role="none"><a role="menuitem" href="portfolio.html">Portfolio</a></li>
-                        <li role="none"><a role="menuitem" href="legal.html">Mentions Légales</a></li>
-                        <li role="none"><a role="menuitem" href="contact.html">Contactez-nous</a></li>
+                    <ul
+                        id="main-menu"
+                        class="nav-menu"
+                        style="list-style: none"
+                        role="menubar"
+                    >
+                        <li role="none">
+                            <a role="menuitem" href="about.html">À propos</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="pricing.html">Tarifs</a>
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="portfolio.html"
+                                >Portfolio</a
+                            >
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="legal.html"
+                                >Mentions Légales</a
+                            >
+                        </li>
+                        <li role="none">
+                            <a role="menuitem" href="contact.html"
+                                >Contactez-nous</a
+                            >
+                        </li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <main class="main" id="main-content" role="main" aria-label="Contenu principal" tabindex="-1">
-            <h1>À propos de nous</h1>
-            <section aria-labelledby="services">
-                <h2 id="services">Nos services</h2>
-                <p>
-                    Nous proposons une gamme de services adaptés à vos besoins en
-                    développement web :
-                </p>
-                <ul class="animation-details">
-                    <li>Développement de sites web sur mesure</li>
-                    <li>Optimisation des performances et du référencement (SEO)</li>
-                    <li>Conception d'interfaces utilisateur intuitives</li>
-                    <li>Maintenance et mises à jour de vos sites existants</li>
-                </ul>
-            </section>
-            <section aria-labelledby="pourquoi-nous">
-                <h2 id="pourquoi-nous">Pourquoi nous choisir ?</h2>
-                <p>
-                    Notre approche repose sur la création de sites légers, rapides,
-                    accessibles et respectueux de l’environnement numérique,
-                    garantissant une excellente expérience utilisateur même sur des
-                    réseaux lents.
-                </p>
-            </section>
-            <section aria-labelledby="contact">
-                <h2 id="contact">Contact</h2>
-                <address>
-                    Vous avez un projet ou des questions ? Écrivez-nous à
-                    <a href="mailto:contact@example.com">contact@example.com</a>.
-                </address>
+        <main
+            class="main"
+            id="main-content"
+            role="main"
+            aria-label="Contenu principal"
+            tabindex="-1"
+        >
+            <section>
+                <h1>À propos de nous</h1>
+                <section aria-labelledby="services">
+                    <h2 id="services">Nos services</h2>
+                    <p>
+                        Nous proposons une gamme de services adaptés à vos
+                        besoins en développement web :
+                    </p>
+                    <ul class="animation-details">
+                        <li>Développement de sites web sur mesure</li>
+                        <li>
+                            Optimisation des performances et du référencement
+                            (SEO)
+                        </li>
+                        <li>Conception d'interfaces utilisateur intuitives</li>
+                        <li>
+                            Maintenance et mises à jour de vos sites existants
+                        </li>
+                    </ul>
+                </section>
+                <section aria-labelledby="pourquoi-nous">
+                    <h2 id="pourquoi-nous">Pourquoi nous choisir ?</h2>
+                    <p>
+                        Notre approche repose sur la création de sites légers,
+                        rapides, accessibles et respectueux de l’environnement
+                        numérique, garantissant une excellente expérience
+                        utilisateur même sur des réseaux lents.
+                    </p>
+                </section>
+                <section aria-labelledby="contact">
+                    <h2 id="contact">Contact</h2>
+                    <address>
+                        Vous avez un projet ou des questions ? Écrivez-nous à
+                        <a href="mailto:contact@example.com"
+                            >contact@example.com</a
+                        >.
+                    </address>
+                </section>
             </section>
         </main>
         <footer role="contentinfo">
@@ -86,7 +122,8 @@
                 e &&
                     t &&
                     (e.addEventListener("click", function () {
-                        const expanded = this.getAttribute("aria-expanded") === "true";
+                        const expanded =
+                            this.getAttribute("aria-expanded") === "true";
                         this.setAttribute("aria-expanded", String(!expanded));
                         t.classList.toggle("active");
                     }),
