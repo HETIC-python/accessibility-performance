@@ -8,6 +8,14 @@ Bienvenue dans le projet **Accessibilité & Performance** ! Ce dépôt propose u
 ...
 
 
+## L´Équipe
+- **Jiad Abdul**
+- **Paul Charbel**
+- **Faithgot glin-dayi**
+- **Hugo cieplucha**
+- **Ahmat Rouchad**
+- **Siaka doumbia**
+
 ## 🌟 Présentation du projet
 
 Ce projet met en avant les bonnes pratiques en matière de :
@@ -92,6 +100,23 @@ Pour ajouter le popup de consentement, intégrez le contenu de `cookie_popup.htm
 - **Labels et rôles ARIA** pour la navigation et les dialogues
 - **Gestion du focus** dans les modales et menus
 - **Contraste des couleurs** et indicateurs de focus visibles
+
+## Ce qu'on a du abandonner :
+
+- **Animations d’arrière-plan**, 🌪️ Distrayantes, perturbent les personnes neuroatypiques (autisme, TDAH), peuvent provoquer malaise ou nausée (motion sickness).
+- **Transitions rapides ou brutales** ⚡ Peu confortables à suivre, notamment pour les personnes avec des troubles de l’attention ou de la perception.
+- **Usage excessif de couleurs pour transmettre de l’information** 🎨 Exemple : “les erreurs sont rouges, les réussites vertes”, illisible pour les daltoniens si non doublé de texte ou d’icône.
+
+
+## Objectifs futurs
+
+- [ ] Optimiser le temps de chargement initial :
+- [ ] Ajout d´images (WebP, compression)
+- [ ] Utilisation de `lazy-loading` pour les images et les composants lourds
+- [ ] Activer la mise en cache statique (Cache-Control, ETag)
+- [ ] Minifier les fichiers CSS/JS en plus du HTML
+- [ ] Permettre **l’ajustement de la taille du texte** :
+- [ ] Prévoir un système de **traduction multilingue** (i18n) FR / EN au minimum
 
 ---
 
